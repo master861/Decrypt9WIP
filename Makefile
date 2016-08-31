@@ -32,7 +32,7 @@ THEME	:=
 #---------------------------------------------------------------------------------
 ARCH	:=	-mthumb -mthumb-interwork -flto
 
-CFLAGS	:=	-g -Wall -Wextra -Wpedantic -pedantic -O2\
+CFLAGS	:=	-g -Wall -Wextra -Wpedantic -pedantic -O3\
 			-march=armv5te -mtune=arm946e-s -fomit-frame-pointer\
 			-ffast-math -std=c99\
 			$(ARCH)
@@ -66,13 +66,13 @@ else ifeq ($(EXEC_METHOD),A9LH)
 	LDFLAGS += --specs=../a9lh.specs
 endif
 
-LIBS	:=
+LIBS	:= -lctru
 
 #---------------------------------------------------------------------------------
 # list of directories containing libraries, this must be the top level containing
 # include and lib
 #---------------------------------------------------------------------------------
-LIBDIRS	:=
+LIBDIRS	:= /opt/devkitpro/libctru/
 
 #---------------------------------------------------------------------------------
 # no real need to edit anything past this point unless you need to add additional
