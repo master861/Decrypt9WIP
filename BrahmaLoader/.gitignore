@@ -1,0 +1,10 @@
+*.elf
+*.3dsx
+*.smdh
+
+/sample/code/*/build
+/sample/code/*/*.bin
+
+/build
+/output
+/release
